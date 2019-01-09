@@ -6,5 +6,5 @@ COPY package.json .
 RUN npm install
 
 # keep the container running, just for testing
-CMD tail -f /dev/null
+#CMD tail -f /dev/null
 
