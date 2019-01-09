@@ -1,0 +1,12 @@
+version: '3.6'
+services:
+    server:
+        build:
+            context: ./server
+            dockerfile: Dockerfile.dev
+        #restart: always
+        volumes:
+            - /app/node_modules
+            - ./server:/app
+        environment:
+            - pass = ex
