@@ -12,4 +12,8 @@ services:
             - ./server:/app
         environment:
             - PORT=5000
-        command: ["npm", "run", "start"]
+            - COOKIE_KEY='wrgbaewjrp23f65965246fd6fw6evasdvDSGwaegvrvbAwervb'
+        env_file:
+            - env.server
+            - env.database
+        command: ['npm', 'run', 'dev']
